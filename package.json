@@ -2,6 +2,7 @@
   "name": "ts-oo",
   "version": "1.0.0",
   "description": "TS - TreinaWeb",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JmJunior20/TS-OO/issues"
   },
-  "homepage": "https://github.com/JmJunior20/TS-OO#readme"
+  "homepage": "https://github.com/JmJunior20/TS-OO#readme",
+  "dependencies": {
+    "typescript": "^4.9.3"
+  }
 }
