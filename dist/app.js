@@ -13,6 +13,8 @@ do {
     option = teclado('Escolha uma opção acima: ');
     switch (option) {
         case '1':
+            let diaristas = repository.listar();
+            diaristas.forEach(diarista => console.log(`ID: ${diarista.id} - Nome: ${diarista.nome}`));
             break;
         case '2':
             break;
