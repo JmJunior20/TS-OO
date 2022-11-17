@@ -5,6 +5,8 @@ import { DiaristaRepository } from "./src/diarista/diarista.repository.js";
 let teclado = prompt();
 let option;
 let repository = new DiaristaRepository;
+let id = '';
+
 do {
     console.log('1 - Listar Diaristas');
     console.log('2 - Exibir Diarista');
@@ -19,6 +21,8 @@ do {
             diaristas.forEach(diarista => console.log(`ID: ${diarista.id} - Nome: ${diarista.nome}`));       
             break;
         case '2':
+            id = teclado('Digite o ID do(a) diarista que deseja exibir: ');
+            console.log(repository.exibir(+id));
             break;
         case '3':
             let nome = teclado('Digite o nome do(a) diarista: ')

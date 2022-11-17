@@ -10,7 +10,11 @@ export class DiaristaRepository implements IRepository<Diarista, number> {
     }
 
     exibir(id: number): Diarista {
-        //
+        const diarista = this.diaristas.filter(diarista => diarista.id === id);
+        if(!diarista[0]) {
+            console.log('Diarista não encontrado - ID Inválido!');
+        }
+        return diarista[0];
     }
 
     cadastrar(model: Diarista): void {

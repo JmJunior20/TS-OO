@@ -7,7 +7,11 @@ export class DiaristaRepository {
         return this.diaristas;
     }
     exibir(id) {
-        //
+        const diarista = this.diaristas.filter(diarista => diarista.id === id);
+        if (!diarista[0]) {
+            console.log('Diarista não encontrado - ID Inválido!');
+        }
+        return diarista[0];
     }
     cadastrar(model) {
         model.id = this.id++;
