@@ -8,7 +8,7 @@ let repository = new DiaristaRepository;
 let id = '';
 
 do {
-    console.log('1 - Listar Diaristas');
+    console.log('\n1 - Listar Diaristas');
     console.log('2 - Exibir Diarista');
     console.log('3 - Cadastrar Diarista');
     console.log('4 - Excluir Diarista');
@@ -32,6 +32,8 @@ do {
             repository.cadastrar(diarista);
             break;
         case '4':
+            id = teclado('Digite o Id do(a) diarista que deseja excluir: ')
+            repository.excluir(+id);
             break;
         default:
             break;

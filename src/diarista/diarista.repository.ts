@@ -23,7 +23,15 @@ export class DiaristaRepository implements IRepository<Diarista, number> {
         console.log('Diarista cadastrado com sucesso!')
     }
 
-    excluir(id: number): void {
-        //
+    excluir(id: number) {
+        const temDiarista = this.diaristas.filter(diarista => diarista.id === id);
+        if(!temDiarista[0]) {
+            console.log('Diarista não encontrado - ID Inválido!');
+            return false;
+        }
+
+        const diaristas = this.diaristas.filter(diarista => diarista.id != id);
+        this.diaristas = diaristas;
+        console.log('Diarista exclído com sucesso!');
     }
 }
